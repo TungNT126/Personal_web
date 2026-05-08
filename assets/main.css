@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-workSans text-ink-900 bg-theme1 dark:bg-ink-900 dark:text-ink-50;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+  .card {
+    @apply rounded-2xl border border-black/10 bg-white/70 p-5 shadow-sm backdrop-blur dark:border-white/10 dark:bg-white/5;
+  }
+  .chip {
+    @apply inline-flex items-center gap-2 rounded-full border border-black/10 bg-white/70 px-3 py-1 text-sm font-medium text-ink-800 dark:border-white/10 dark:bg-white/5 dark:text-ink-100;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-black/10 bg-white/70 px-4 py-2 text-sm font-semibold text-ink-900 shadow-sm transition hover:-translate-y-0.5 hover:bg-white dark:border-white/10 dark:bg-white/5 dark:text-ink-50 dark:hover:bg-white/10;
+  }
+  .btn-primary {
+    @apply border-transparent bg-brand-600 text-white hover:bg-brand-700 dark:bg-brand-500 dark:hover:bg-brand-600;
+  }
+  .btn-ghost {
+    @apply border-transparent bg-transparent shadow-none hover:bg-black/5 dark:hover:bg-white/10;
+  }
+  .link {
+    @apply font-semibold text-brand-700 hover:opacity-80 dark:text-brand-300;
+  }
+}
+
+@font-face {
+    font-family: 'workSans'; /* Đặt tên tùy ý */
+    src: url('./fonts/Work_Sans/WorkSans-VariableFont_wght.ttf') format('truetype'); /* Trỏ đúng đường dẫn */
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; /* Giúp chữ hiển thị nhanh hơn khi load web */
+  }
+
+@font-face {
+    font-family: 'epilogue';
+    src: url('../assets/fonts/Epilogue/Epilogue-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

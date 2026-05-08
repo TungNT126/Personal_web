@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyễn Thanh Tùng | Frontend Developer</title>
+    <link rel="stylesheet" href="./assets/tailwind.css">
+</head>
+<body class="min-h-screen selection:bg-brand-500/20">
+    <a href="#content" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-xl focus:bg-white focus:px-4 focus:py-2 focus:font-semibold focus:text-ink-900 dark:focus:bg-ink-800 dark:focus:text-ink-50">Skip to content</a>
+
+    <header class="sticky top-0 z-40 border-b border-black/10 bg-theme1/80 backdrop-blur dark:border-white/10 dark:bg-ink-900/70">
+        <div class="container-page flex items-center justify-between py-3">
+            <a href="#home" class="flex items-center gap-3">
+                <div class="grid size-10 place-items-center rounded-2xl bg-ink-900 text-white dark:bg-white dark:text-ink-900">
+                    <!-- <span class="font-epilogue text-sm font-extrabold tracking-wide">NTT</span> -->
+                     <img class="rounded-full w-10 h-10" src="./assets/image/cv_avatar.png" alt="cv_avatar">
+                </div>
+                <div class="hidden sm:block">
+                    <div class="font-epilogue text-sm font-extrabold tracking-wide">Nguyễn Thanh Tùng</div>
+                    <div class="text-xs text-ink-600 dark:text-ink-300" data-i18n="role">Frontend Developer</div>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-6">
+                <a href="#about" class="nav-link text-sm font-semibold text-ink-700 hover:opacity-80 dark:text-ink-100" data-i18n="nav.about">About</a>
+                <a href="#skills" class="nav-link text-sm font-semibold text-ink-700 hover:opacity-80 dark:text-ink-100" data-i18n="nav.skills">Skills</a>
+                <a href="#projects" class="nav-link text-sm font-semibold text-ink-700 hover:opacity-80 dark:text-ink-100" data-i18n="nav.projects">Projects</a>
+                <a href="#experience" class="nav-link text-sm font-semibold text-ink-700 hover:opacity-80 dark:text-ink-100" data-i18n="nav.experience">Experience</a>
+                <a href="#education" class="nav-link text-sm font-semibold text-ink-700 hover:opacity-80 dark:text-ink-100" data-i18n="nav.education">Education</a>
+                <a href="#contact" class="nav-link text-sm font-semibold text-ink-700 hover:opacity-80 dark:text-ink-100" data-i18n="nav.contact">Contact</a>
+            </nav>
+
+            <div class="flex items-center gap-2">
+                <button id="langToggle" type="button" class="btn btn-ghost" aria-label="Toggle language">VI/EN</button>
+                <button id="themeToggle" type="button" class="btn btn-ghost" aria-label="Toggle dark mode">
+                    <span class="hidden dark:inline" data-i18n="ui.light">Light</span>
+                    <span class="dark:hidden" data-i18n="ui.dark">Dark</span>
+                </button>
+                <button id="menuToggle" type="button" class="btn md:hidden" aria-controls="mobileMenu" aria-expanded="false" data-i18n="ui.menu">Menu</button>
+            </div>
+        </div>
+
+        <div id="mobileMenu" class="hidden border-t border-black/10 bg-theme1/80 backdrop-blur dark:border-white/10 dark:bg-ink-900/70 md:hidden">
+            <div class="container-page flex flex-col gap-1 py-3">
+                <a href="#about" class="nav-link rounded-xl px-3 py-2 text-sm font-semibold hover:bg-black/5 dark:hover:bg-white/10" data-i18n="nav.about">About</a>
+                <a href="#skills" class="nav-link rounded-xl px-3 py-2 text-sm font-semibold hover:bg-black/5 dark:hover:bg-white/10" data-i18n="nav.skills">Skills</a>
+                <a href="#projects" class="nav-link rounded-xl px-3 py-2 text-sm font-semibold hover:bg-black/5 dark:hover:bg-white/10" data-i18n="nav.projects">Projects</a>
+                <a href="#experience" class="nav-link rounded-xl px-3 py-2 text-sm font-semibold hover:bg-black/5 dark:hover:bg-white/10" data-i18n="nav.experience">Experience</a>
+                <a href="#education" class="nav-link rounded-xl px-3 py-2 text-sm font-semibold hover:bg-black/5 dark:hover:bg-white/10" data-i18n="nav.education">Education</a>
+                <a href="#contact" class="nav-link rounded-xl px-3 py-2 text-sm font-semibold hover:bg-black/5 dark:hover:bg-white/10" data-i18n="nav.contact">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="content">
+        <!-- Hero -->
+        <section id="home" class="py-14 sm:py-20">
+            <div class="container-page grid gap-10 lg:grid-cols-12 lg:items-center">
+                <div class="scroll-reveal opacity-0 translate-y-10 transition-all duration-700 ease-out lg:col-span-7">
+                    <div class="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white/60 px-3 py-1 text-xs font-semibold text-ink-700 dark:border-white/10 dark:bg-white/5 dark:text-ink-100">
+                        <span class="inline-block size-2 rounded-full bg-brand-600"></span>
+                        <span data-i18n="hero.badge">Open to Frontend opportunities</span>
+                    </div>
+
+                    <h1 class="mt-4 font-epilogue text-4xl font-extrabold tracking-tight sm:text-5xl">
+                        <span data-i18n="hero.hi">Hi, I’m</span> <span class="text-brand-700 dark:text-brand-300">Nguyễn Thanh Tùng</span>.
+                    </h1>
+                    <p class="mt-3 text-lg text-ink-700 dark:text-ink-200" data-i18n="hero.title">
+                        Frontend Developer focused on building clean UI, good UX, and reliable web apps.
+                    </p>
+
+                    <div class="mt-6 flex flex-wrap gap-2">
+                        <span class="chip">React</span>
+                        <span class="chip">TypeScript</span>
+                        <span class="chip">Tailwind CSS</span>
+                        <span class="chip">Vite</span>
+                        <span class="chip">Redux / RTK Query</span>
+                    </div>
+
+                    <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+                        <a class="btn btn-primary" href="#projects" data-i18n="hero.ctaProjects">View Projects</a>
+                        <a class="btn" href="#contact" data-i18n="hero.ctaContact">Contact</a>
+                        <button id="copyEmailBtn" type="button" class="btn btn-ghost" data-copy="tungngt1126@gmail.com" data-i18n="hero.copyEmail">Copy Email</button>
+                    </div>
+
+                    <div class="mt-4 text-sm text-ink-600 dark:text-ink-300">
+                        <span class="font-semibold" data-i18n="hero.locationLabel">Location</span>:
+                        <span data-i18n="hero.locationValue">Tây Hồ, Hà Nội</span>
+                        <span class="mx-2 text-ink-400">•</span>
+                        <a class="link" href="https://github.com/TungNT126" target="_blank" rel="noreferrer">github.com/TungNT126</a>
+                    </div>
+                </div>
+
+                <div class="scroll-reveal opacity-0 translate-y-10 transition-all duration-700 ease-out lg:col-span-5">
+                    <div class="card">
+                        <div class="flex items-start justify-between gap-4">
+                            <div>
+                                <div class="text-xs font-semibold uppercase tracking-wider text-ink-500 dark:text-ink-300" data-i18n="card.quickInfo">Quick info</div>
+                                <div class="mt-1 font-epilogue text-xl font-extrabold" data-i18n="card.role">Frontend Developer</div>
+                                <div class="mt-2 text-sm text-ink-700 dark:text-ink-200" data-i18n="card.summary">
+                                    Fresher-level Frontend with strong logic mindset and high learning ability, aiming to become a Fullstack Developer.
+                                </div>
+                            </div>
+                            <div class="grid size-32 rounded-2xl">
+                                <img class="w-full rounded-3xl" src="./assets/image/cv_avatar.png" alt="cv">
+                            </div>
+                        </div>
+                        <div class="mt-5 grid gap-3 sm:grid-cols-2">
+                            <button class="btn" type="button" data-copy="098 688 2612" data-i18n="card.copyPhone">Copy Phone</button>
+                            <a class="btn" href="#skills" data-i18n="card.exploreSkills">Explore Skills</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="py-12 sm:py-16">
+            <div class="container-page">
+                <div class="scroll-reveal opacity-0 translate-y-10 transition-all duration-700 ease-out card">
+                    <h2 class="font-epilogue text-2xl font-extrabold" data-i18n="about.title">About</h2>
+                    <p class="mt-3 text-ink-700 dark:text-ink-200" data-i18n="about.body">
+                        I’m a Frontend Developer with solid logical thinking and fast learning. I’m oriented to become a Fullstack Developer. I enjoy learning new tech and building high-quality web products.
+                    </p>
+                    <div class="mt-5 grid gap-4 sm:grid-cols-2">
+                        <div class="rounded-2xl border border-black/10 bg-white/50 p-4 dark:border-white/10 dark:bg-white/5">
+                            <div class="text-xs font-semibold uppercase tracking-wider text-ink-500 dark:text-ink-300" data-i18n="about.focus">Focus</div>
+                            <ul class="mt-2 space-y-1 text-sm text-ink-700 dark:text-ink-200">
+                                <li data-i18n="about.focus1">Clean component architecture</li>
+                                <li data-i18n="about.focus2">Accessible, responsive UI</li>
+                                <li data-i18n="about.focus3">State management & API integration</li>
+                            </ul>
+                        </div>
+                        <div class="rounded-2xl border border-black/10 bg-white/50 p-4 dark:border-white/10 dark:bg-white/5">
+                            <div class="text-xs font-semibold uppercase tracking-wider text-ink-500 dark:text-ink-300" data-i18n="about.highlights">Highlights</div>
+                            <ul class="mt-2 space-y-1 text-sm text-ink-700 dark:text-ink-200">
+                                <li data-i18n="about.highlight1">React + TypeScript</li>
+                                <li data-i18n="about.highlight2">Tailwind CSS / Bootstrap</li>
+                                <li data-i18n="about.highlight3">FastAPI basics (backend exposure)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" class="py-12 sm:py-16">
+            <div class="container-page">
+                <div class="scroll-reveal opacity-0 translate-y-10 transition-all duration-700 ease-out">
+                    <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+                        <div>
+                            <h2 class="font-epilogue text-2xl font-extrabold" data-i18n="skills.title">Skills</h2>
+                            <p class="mt-2 text-ink-700 dark:text-ink-200" data-i18n="skills.subtitle">
+                                The stack I use most often for building modern web apps.
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <button class="btn btn-ghost" type="button" data-skill-filter="all" data-i18n="skills.filterAll">All</button>
+                            <button class="btn btn-ghost" type="button" data-skill-filter="frontend">Frontend</button>
+                            <button class="btn btn-ghost" type="button" data-skill-filter="tools">Tools</button>
+                            <button class="btn btn-ghost" type="button" data-skill-filter="backend">Backend</button>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                        <div class="card skill-item" data-skill="frontend">
+                            <div class="font-epilogue text-lg font-extrabold">React</div>
+                            <p class="mt-1 text-sm text-ink-700 dark:text-ink-200" data-i18n="skills.reactDesc">Components, hooks, routing, patterns.</p>
+                        </div>
+                        <div class="card skill-item" data-skill="frontend">
+                            <div class="font-epilogue text-lg font-extrabold">JavaScript / TypeScript</div>
+                            <p class="mt-1 text-sm text-ink-700 dark:text-ink-200" data-i18n="skills.jsDesc">DOM, async, API integration, typing.</p>
+                        </div>
+                        <div class="card skill-item" data-skill="frontend">
+                            <div class="font-epilogue text-lg font-extrabold">Tailwind CSS / Bootstrap</div>
+                            <p class="mt-1 text-sm text-ink-700 dark:text-ink-200" data-i18n="skills.cssDesc">Utility-first UI, responsive layout.</p>
+                        </div>
+                        <div class="card skill-item" data-skill="tools">
+                            <div class="font-epilogue text-lg font-extrabold">Vite</div>
+                            <p class="mt-1 text-sm text-ink-700 dark:text-ink-200" data-i18n="skills.viteDesc">Fast dev server & build.</p>
+                        </div>
+                        <div class="card skill-item" data-skill="tools">
+                            <div class="font-epilogue text-lg font-extrabold">Redux / RTK Query</div>
+                            <p class="mt-1 text-sm text-ink-700 dark:text-ink-200" data-i18n="skills.reduxDesc">State management, caching, API calls.</p>
+                        </div>
+                        <div class="card skill-item" data-skill="backend">
+                            <div class="font-epilogue text-lg font-extrabold">FastAPI</div>
+                            <p class="mt-1 text-sm text-ink-700 dark:text-ink-200" data-i18n="skills.fastapiDesc">Basics for REST API and integration.</p>
+                        </div>
+                        <div class="card skill-item" data-skill="backend">
+                            <div class="font-epilogue text-lg font-extrabold">Python</div>
+                            <p class="mt-1 text-sm text-ink-700 dark:text-ink-200" data-i18n="skills.pythonDesc">Scripting and fundamentals.</p>
+                        </div>
+                        <div class="card skill-item" data-skill="tools">
+                            <div class="font-epilogue text-lg font-extrabold" data-i18n="skills.english">English</div>
+                            <p class="mt-1 text-sm text-ink-700 dark:text-ink-200">IELTS 7.5</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="py-12 sm:py-16">
+            <div class="container-page">
+                <div class="scroll-reveal opacity-0 translate-y-10 transition-all duration-700 ease-out">
+                    <h2 class="font-epilogue text-2xl font-extrabold" data-i18n="projects.title">Projects</h2>
+                    <p class="mt-2 text-ink-700 dark:text-ink-200" data-i18n="projects.subtitle">
+                        Selected work that highlights Tailwind + JavaScript/TypeScript skills.
+                    </p>
+
+                    <div class="mt-6 grid gap-4 lg:grid-cols-2">
+                        <article class="card">
+                            <div class="flex items-start justify-between gap-3">
+                                <div>
+                                    <h3 class="font-epilogue text-xl font-extrabold">Website review phim</h3>
+                                    <p class="mt-1 text-sm text-ink-700 dark:text-ink-200" data-i18n="projects.movie.desc">
+                                        Search movies, add reviews, auth flow, and profile features.
+                                    </p>
+                                </div>
+                                <button class="btn btn-ghost" type="button"
+                                    data-project-open
+                                    data-project-title="Website review phim"
+                                    data-project-github="https://github.com/TungNT126/Movie_app"
+                                    data-project-stack="React, TypeScript, Tailwind CSS, Redux, RTK Query"
+                                    data-project-features="Tìm kiếm phim; Thêm review; Login/Logout; User profile; API integration"
+                                    data-i18n="ui.details"
+                                >Details</button>
+                            </div>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="chip">React</span>
+                                <span class="chip">TypeScript</span>
+                                <span class="chip">Tailwind CSS</span>
+                                <span class="chip">Redux</span>
+                                <span class="chip">RTK Query</span>
+                            </div>
+                            <div class="mt-5 flex flex-wrap gap-3">
+                                <a class="btn" href="https://github.com/TungNT126/Movie_app" target="_blank" rel="noreferrer">GitHub</a>
+                                <button class="btn" type="button" data-copy="https://github.com/TungNT126/Movie_app" data-i18n="ui.copyLink">Copy link</button>
+                            </div>
+                        </article>
+
+                        <div class="card">
+                            <h3 class="font-epilogue text-xl font-extrabold" data-i18n="projects.next.title">More projects to come...</h3>
+                            <!-- <p class="mt-2 text-sm text-ink-700 dark:text-ink-200" data-i18n="projects.next.body">
+                                Add 2–3 more projects here later (even small ones like a UI component library, JS mini-app, or Tailwind landing page).
+                            </p> -->
+                            <div class="mt-5 flex flex-wrap gap-3">
+                                <a class="btn btn-primary" href="#contact" data-i18n="projects.next.cta">Request portfolio PDF</a>
+                                <a class="btn" href="https://github.com/TungNT126" target="_blank" rel="noreferrer" data-i18n="projects.next.github">View GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience" class="py-12 sm:py-16">
+            <div class="container-page">
+                <div class="scroll-reveal opacity-0 translate-y-10 transition-all duration-700 ease-out">
+                    <h2 class="font-epilogue text-2xl font-extrabold" data-i18n="exp.title">Experience</h2>
+                    <div class="mt-6 grid gap-4 lg:grid-cols-2">
+                        <article class="card">
+                            <div class="flex items-start justify-between gap-3">
+                                <div>
+                                    <h3 class="font-epilogue text-lg font-extrabold">Intern .NET — FPT Software</h3>
+                                    <div class="mt-1 text-sm text-ink-600 dark:text-ink-300">06/2024 – 08/2024</div>
+                                </div>
+                                <span class="chip">Internship</span>
+                            </div>
+                            <ul class="mt-4 list-disc space-y-1 pl-5 text-sm text-ink-700 dark:text-ink-200">
+                                <li data-i18n="exp.fpt.1">Training C# and SQL (workplace bootcamp).</li>
+                            </ul>
+                        </article>
+
+                        <article class="card">
+                            <div class="flex items-start justify-between gap-3">
+                                <div>
+                                    <h3 class="font-epilogue text-lg font-extrabold">Frontend Intern — MonsterLab</h3>
+                                    <div class="mt-1 text-sm text-ink-600 dark:text-ink-300">12/2025 – 04/2026</div>
+                                </div>
+                                <span class="chip">React + TS</span>
+                            </div>
+                            <ul class="mt-4 list-disc space-y-1 pl-5 text-sm text-ink-700 dark:text-ink-200">
+                                <li data-i18n="exp.monster.1">Supported building UI/UX components using React with TypeScript.</li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Certificates -->
+        <section id="education" class="py-12 sm:py-16">
+            <div class="container-page">
+                <div class="scroll-reveal opacity-0 translate-y-10 transition-all duration-700 ease-out grid gap-4 lg:grid-cols-2">
+                    <div class="card">
+                        <h2 class="font-epilogue text-2xl font-extrabold" data-i18n="edu.title">Education</h2>
+                        <div class="mt-4">
+                            <div class="flex items-start justify-between gap-3">
+                                <div>
+                                    <div class="font-epilogue text-lg font-extrabold">PTIT</div>
+                                    <div class="mt-1 text-sm text-ink-700 dark:text-ink-200" data-i18n="edu.school">
+                                        Posts and Telecommunications Institute of Technology
+                                    </div>
+                                    <div class="mt-2 text-sm text-ink-700 dark:text-ink-200">
+                                        <span class="font-semibold" data-i18n="edu.majorLabel">Major</span>:
+                                        <span data-i18n="edu.majorValue">Information Technology</span>
+                                    </div>
+                                    <div class="mt-1 text-sm text-ink-700 dark:text-ink-200">
+                                        <span class="font-semibold" data-i18n="edu.specLabel">Specialization</span>:
+                                        <span data-i18n="edu.specValue">Information Systems</span>
+                                    </div>
+                                </div>
+                                <div class="text-sm font-semibold text-ink-600 dark:text-ink-300">2020 – 2025</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h2 class="font-epilogue text-2xl font-extrabold" data-i18n="cert.title">Certificates</h2>
+                        <ul class="mt-4 space-y-3">
+                            <li class="flex items-center justify-between gap-3 rounded-2xl border border-black/10 bg-white/50 p-4 dark:border-white/10 dark:bg-white/5">
+                                <div>
+                                    <div class="font-epilogue text-lg font-extrabold">IELTS 7.5</div>
+                                    <div class="text-sm text-ink-600 dark:text-ink-300" data-i18n="cert.ielts">English proficiency</div>
+                                </div>
+                                <span class="chip">7.5</span>
+                            </li>
+                            <li class="flex items-center justify-between gap-3 rounded-2xl border border-black/10 bg-white/50 p-4 dark:border-white/10 dark:bg-white/5">
+                                <div>
+                                    <div class="font-epilogue text-lg font-extrabold">Google Data Analytics</div>
+                                    <div class="text-sm text-ink-600 dark:text-ink-300" data-i18n="cert.gda">Certificate</div>
+                                </div>
+                                <span class="chip" data-i18n="cert.badge">Certified</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="py-12 sm:py-16">
+            <div class="container-page">
+                <div class="scroll-reveal opacity-0 translate-y-10 transition-all duration-700 ease-out card">
+                    <h2 class="font-epilogue text-2xl font-extrabold" data-i18n="contact.title">Contact</h2>
+                    <p class="mt-2 text-ink-700 dark:text-ink-200" data-i18n="contact.subtitle">
+                        Best ways to reach me. One click to copy.
+                    </p>
+
+                    <div class="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+                        <button class="btn justify-start" type="button" data-copy="tungngt1126@gmail.com">
+                            <span class="font-semibold">Email</span>
+                            <span class="ml-auto text-ink-600 dark:text-ink-300">Copy</span>
+                        </button>
+                        <button class="btn justify-start" type="button" data-copy="098 688 2612">
+                            <span class="font-semibold" data-i18n="contact.phone">Phone</span>
+                            <span class="ml-auto text-ink-600 dark:text-ink-300">Copy</span>
+                        </button>
+                        <a class="btn justify-start" href="https://github.com/TungNT126" target="_blank" rel="noreferrer">
+                            <span class="font-semibold">GitHub</span>
+                            <span class="ml-auto text-ink-600 dark:text-ink-300" data-i18n="contact.open">Open</span>
+                        </a>
+                        <div class="btn justify-start cursor-default" role="note">
+                            <span class="font-semibold" data-i18n="contact.dob">DOB</span>
+                            <span class="ml-auto text-ink-600 dark:text-ink-300">12/06/2002</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-black/10 py-8 dark:border-white/10">
+        <div class="container-page flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+            <div class="text-sm text-ink-600 dark:text-ink-300">
+                © <span id="year"></span> Nguyễn Thanh Tùng. <span data-i18n="footer.rights">All rights reserved.</span>
+            </div>
+            <div class="text-sm text-ink-600 dark:text-ink-300">
+                Built with <span class="font-semibold">Tailwind CSS</span> + <span class="font-semibold">Vanilla JS</span>.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project modal -->
+    <div id="modalBackdrop" class="fixed inset-0 z-50 hidden items-end justify-center bg-black/50 p-4 sm:items-center">
+        <div role="dialog" aria-modal="true" aria-labelledby="modalTitle" class="w-full max-w-2xl rounded-2xl bg-white p-5 shadow-xl dark:bg-ink-900">
+            <div class="flex items-start justify-between gap-4">
+                <div>
+                    <div id="modalTitle" class="font-epilogue text-xl font-extrabold">Project</div>
+                    <div id="modalStack" class="mt-1 text-sm text-ink-600 dark:text-ink-300"></div>
+                </div>
+                <button id="modalClose" class="btn btn-ghost" type="button" data-i18n="ui.close">Close</button>
+            </div>
+            <div class="mt-4">
+                <div class="text-xs font-semibold uppercase tracking-wider text-ink-500 dark:text-ink-300" data-i18n="ui.features">Features</div>
+                <ul id="modalFeatures" class="mt-2 list-disc space-y-1 pl-5 text-sm text-ink-700 dark:text-ink-200"></ul>
+            </div>
+            <div class="mt-5 flex flex-wrap gap-3">
+                <a id="modalGithub" class="btn btn-primary" href="#" target="_blank" rel="noreferrer">GitHub</a>
+                <button id="modalCopy" class="btn" type="button" data-i18n="ui.copyLink">Copy link</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast" class="pointer-events-none fixed bottom-4 left-1/2 z-50 hidden -translate-x-1/2 rounded-full bg-ink-900 px-4 py-2 text-sm font-semibold text-white shadow-lg dark:bg-white dark:text-ink-900"></div>
+
+    <script src="./main.js"></script>
+</html>
